@@ -1,0 +1,213 @@
+{
+  "AtlasMapping" : {
+    "jsonType" : "io.atlasmap.v2.AtlasMapping",
+    "dataSource" : [ {
+      "jsonType" : "io.atlasmap.xml.v2.XmlDataSource",
+      "id" : "schema-employee-635c03d5-d2da-4ab6-a475-b1127e1efb01",
+      "name" : "schema-employee",
+      "description" : "Source document schema-employee type: XSD",
+      "uri" : "atlas:xml:schema-employee-635c03d5-d2da-4ab6-a475-b1127e1efb01",
+      "dataSourceType" : "SOURCE",
+      "xmlNamespaces" : {
+        "xmlNamespace" : [ ]
+      }
+    }, {
+      "jsonType" : "io.atlasmap.v2.DataSource",
+      "id" : "org.nge.model.Person",
+      "name" : "Person",
+      "description" : "Java document class org.nge.model.Person",
+      "uri" : "atlas:java:org.nge.model.Person?className=org.nge.model.Person",
+      "dataSourceType" : "TARGET"
+    } ],
+    "mappings" : {
+      "mapping" : [ {
+        "jsonType" : "io.atlasmap.v2.Mapping",
+        "inputField" : [ {
+          "jsonType" : "io.atlasmap.xml.v2.XmlField",
+          "docId" : "schema-employee-635c03d5-d2da-4ab6-a475-b1127e1efb01",
+          "path" : "/Employee/Address/City",
+          "fieldType" : "STRING",
+          "name" : "City",
+          "userCreated" : false,
+          "attribute" : false
+        } ],
+        "outputField" : [ {
+          "jsonType" : "io.atlasmap.java.v2.JavaField",
+          "docId" : "org.nge.model.Person",
+          "path" : "/contactInfo/location/city",
+          "fieldType" : "STRING",
+          "name" : "city"
+        } ],
+        "id" : "mapping.11790"
+      }, {
+        "jsonType" : "io.atlasmap.v2.Mapping",
+        "inputField" : [ {
+          "jsonType" : "io.atlasmap.xml.v2.XmlField",
+          "docId" : "schema-employee-635c03d5-d2da-4ab6-a475-b1127e1efb01",
+          "path" : "/Employee/Address/State",
+          "fieldType" : "STRING",
+          "name" : "State",
+          "userCreated" : false,
+          "attribute" : false
+        } ],
+        "outputField" : [ {
+          "jsonType" : "io.atlasmap.java.v2.JavaField",
+          "docId" : "org.nge.model.Person",
+          "path" : "/contactInfo/location/state",
+          "fieldType" : "STRING",
+          "name" : "state"
+        } ],
+        "id" : "mapping.205331"
+      }, {
+        "jsonType" : "io.atlasmap.v2.Mapping",
+        "inputField" : [ {
+          "jsonType" : "io.atlasmap.xml.v2.XmlField",
+          "docId" : "schema-employee-635c03d5-d2da-4ab6-a475-b1127e1efb01",
+          "path" : "/Employee/Address/ZipCode",
+          "fieldType" : "STRING",
+          "name" : "ZipCode",
+          "userCreated" : false,
+          "attribute" : false
+        } ],
+        "outputField" : [ {
+          "jsonType" : "io.atlasmap.java.v2.JavaField",
+          "docId" : "org.nge.model.Person",
+          "path" : "/contactInfo/location/postalCode",
+          "fieldType" : "STRING",
+          "name" : "postalCode"
+        } ],
+        "id" : "mapping.882570"
+      }, {
+        "jsonType" : "io.atlasmap.v2.Mapping",
+        "inputField" : [ {
+          "jsonType" : "io.atlasmap.xml.v2.XmlField",
+          "docId" : "schema-employee-635c03d5-d2da-4ab6-a475-b1127e1efb01",
+          "path" : "/Employee/Address/Street",
+          "fieldType" : "STRING",
+          "name" : "Street",
+          "userCreated" : false,
+          "attribute" : false
+        } ],
+        "outputField" : [ {
+          "jsonType" : "io.atlasmap.java.v2.JavaField",
+          "docId" : "org.nge.model.Person",
+          "path" : "/contactInfo/location/streetAddress",
+          "fieldType" : "STRING",
+          "name" : "streetAddress"
+        } ],
+        "id" : "mapping.846786"
+      }, {
+        "jsonType" : "io.atlasmap.v2.Mapping",
+        "inputFieldGroup" : {
+          "jsonType" : "io.atlasmap.v2.FieldGroup",
+          "actions" : [ ],
+          "field" : [ {
+            "jsonType" : "io.atlasmap.xml.v2.XmlField",
+            "docId" : "schema-employee-635c03d5-d2da-4ab6-a475-b1127e1efb01",
+            "index" : 0,
+            "path" : "/Employee/Email",
+            "fieldType" : "STRING",
+            "name" : "Email",
+            "userCreated" : false,
+            "attribute" : false
+          } ]
+        },
+        "inputField" : [ ],
+        "outputField" : [ {
+          "jsonType" : "io.atlasmap.java.v2.JavaField",
+          "docId" : "org.nge.model.Person",
+          "path" : "/contactInfo/email",
+          "fieldType" : "STRING",
+          "name" : "email"
+        } ],
+        "id" : "mapping.965600"
+      }, {
+        "jsonType" : "io.atlasmap.v2.Mapping",
+        "inputField" : [ {
+          "jsonType" : "io.atlasmap.xml.v2.XmlField",
+          "docId" : "schema-employee-635c03d5-d2da-4ab6-a475-b1127e1efb01",
+          "path" : "/Employee/EmpID",
+          "fieldType" : "LONG",
+          "name" : "EmpID",
+          "userCreated" : false,
+          "attribute" : false
+        } ],
+        "outputField" : [ {
+          "jsonType" : "io.atlasmap.java.v2.JavaField",
+          "docId" : "org.nge.model.Person",
+          "path" : "/id",
+          "fieldType" : "INTEGER",
+          "name" : "id"
+        } ],
+        "id" : "mapping.944052"
+      }, {
+        "jsonType" : "io.atlasmap.v2.Mapping",
+        "inputFieldGroup" : {
+          "jsonType" : "io.atlasmap.v2.FieldGroup",
+          "actions" : [ {
+            "delimiter" : " ",
+            "delimitingEmptyValues" : true,
+            "@type" : "Concatenate"
+          } ],
+          "field" : [ {
+            "jsonType" : "io.atlasmap.xml.v2.XmlField",
+            "docId" : "schema-employee-635c03d5-d2da-4ab6-a475-b1127e1efb01",
+            "index" : 0,
+            "path" : "/Employee/FirstName",
+            "fieldType" : "STRING",
+            "name" : "FirstName",
+            "userCreated" : false,
+            "attribute" : false
+          }, {
+            "jsonType" : "io.atlasmap.xml.v2.XmlField",
+            "docId" : "schema-employee-635c03d5-d2da-4ab6-a475-b1127e1efb01",
+            "index" : 1,
+            "path" : "/Employee/LastName",
+            "fieldType" : "STRING",
+            "name" : "LastName",
+            "userCreated" : false,
+            "attribute" : false
+          } ]
+        },
+        "inputField" : [ ],
+        "outputField" : [ {
+          "jsonType" : "io.atlasmap.java.v2.JavaField",
+          "docId" : "org.nge.model.Person",
+          "path" : "/fullName",
+          "fieldType" : "STRING",
+          "name" : "fullName"
+        } ],
+        "id" : "mapping.490744"
+      }, {
+        "jsonType" : "io.atlasmap.v2.Mapping",
+        "inputField" : [ {
+          "jsonType" : "io.atlasmap.xml.v2.XmlField",
+          "docId" : "schema-employee-635c03d5-d2da-4ab6-a475-b1127e1efb01",
+          "path" : "/Employee/Phone",
+          "fieldType" : "STRING",
+          "name" : "Phone",
+          "userCreated" : false,
+          "attribute" : false
+        } ],
+        "outputField" : [ {
+          "jsonType" : "io.atlasmap.java.v2.JavaField",
+          "docId" : "org.nge.model.Person",
+          "path" : "/contactInfo/phone",
+          "fieldType" : "STRING",
+          "name" : "phone"
+        } ],
+        "id" : "mapping.388232"
+      } ]
+    },
+    "lookupTables" : {
+      "lookupTable" : [ ]
+    },
+    "constants" : {
+      "constant" : [ ]
+    },
+    "properties" : {
+      "property" : [ ]
+    },
+    "name" : "UI.0"
+  }
+}
